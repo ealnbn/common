@@ -1,0 +1,16 @@
+常用类库
+============================
+-[async]()
+```
+异步处理库
+var asyncFunc = [cb1,cb2]
+async.series(asyncFunc, function(err, values) {
+	//console.log("async values")
+	if(err) {
+		console.log("处理出现问题" + err);					
+		return;
+	}			
+	//OK
+	
+});
+```            
