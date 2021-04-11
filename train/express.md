@@ -1,9 +1,10 @@
 路由匹配
 ===============================
 // will match acd and abcd
-app.get('/ab?cd', function(req, res) {
+```app.get('/ab?cd', function(req, res) {
   res.send('ab?cd');
 });
+```
 
 // will match abcd, abbcd, abbbcd, and so on
 app.get('/ab+cd', function(req, res) {
