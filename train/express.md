@@ -1,3 +1,23 @@
+路由
+=================
+```
+var express = require('express');
+var app = express();
+
+//get方法
+app.get('/', function(req, res) {
+  res.send('hello world');
+});
+
+
+var router = express.Router();
+router.get('/', function(req,res){
+  res.end("xxxx");
+})
+router.post('/', function(req,res){
+  res.end("xxxx");
+})
+```
 路由匹配
 ===============================
 ```
@@ -11,22 +31,16 @@ app.get('/ab+cd', function(req, res) {
   res.send('ab+cd');
 });
 
-
-``` 
-
-
-路由参数获取
-=======================================
-```
 app.get('/user/:name', function(req, res) {
   req.param('name')
 });
+``` 
 
-// GET /search?q=tobi+ferret
-req.query.q
-req.body
-route.query
-route.body
-res.end([data] [, encoding])
+
+模板引擎
+=======================================
 ```
-
+//js版本的JSP?
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+```
